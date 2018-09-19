@@ -9,6 +9,46 @@
     <script type="text/javascript" src="index.js"></script>
     </head>
     <body onLoad="setButton()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                <h1>Countdown to...</h1>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+        <h2 id="DateDisplay" style="display:none">000:00:00:00</h2>
+        <h3 id="DateTitles" style="display:none">Days Hrs Mins Secs</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <button class = "DateButton" id="Xmas-button" onclick="changeText('Xmas-button',11, 25, 'Christmas', 'Green', 'Red', 'White')">Christmas</button>
+                </div>
+                <div class="col-md-4">
+                    <button class = "DateButton" id="VDay-button">Valentine's Day</button>
+                </div>
+                <div class="col-md-4">
+                    <button class = "DateButton" id="SPDay-button">St. Patty's Day</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button class = "DateButton" id="NY-button">New Year's</button>
+                </div>
+                <div class="col-md-4">
+                    <button class = "DateButton" id="4th-button">4th of July</button>
+                </div>
+                <div class="col-md-4">
+                    <button class = "DateButton" id="Custbutton">Custom</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        
 
-    </body>
+        <script src="index.js"></script>
+        </body>
 </html>
