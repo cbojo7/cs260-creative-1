@@ -35,7 +35,7 @@ class Countdown{
             monthDiff += 12;
         }
         if (dayDiff < 0) {
-            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear());
+            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear()) - 2;
         }
         var hourDiff = 23 - this.today.getHours();
         var minDiff = 59 - this.today.getMinutes();
@@ -51,7 +51,7 @@ function changeText(id, month, day, title, color1, color2, foregroundColor) {
 }
 
 function lastDay(month,year) {
-    return new Date(month,year,0);
+    return new Date(month,year,0).getDate();
 }
 
 
