@@ -55,6 +55,22 @@ function lastDay(month,year) {
     return new Date(month,year,0).getDate();
 }
 
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var yearDiff = this.date.getFullYear() - this.today.getFullYear();
+    var monthDiff = this.date.getMonth() - this.today.getMonth();
+    var dayDiff = this.date.getDate() - this.today.getDate() - 1;
+    if (monthDiff < 0) {
+        monthDiff += 12;
+    }
+    if (dayDiff < 0) {
+        dayDiff += lastDay(this.date.getMonth() - 1,this.date.getFullYear());
+    }
+    var hourDiff = 23 - now.getHours();
+    var minDiff = 59 - now.getMinutes();
+    var secDiff = 59 - now.getSeconds();
+}, 1000);
+
 
 // var newYears = new Countdown("NY-button", 0, 1, "New Year's Day", "Dark Blue", "White", "Gray");
 // var valentines = new Countdown("VDay-button", 1, 14, "Valentine's Day", "Red", "Pink", "White");
