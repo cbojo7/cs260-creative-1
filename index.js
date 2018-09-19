@@ -28,6 +28,11 @@ class Countdown{
     }
 
     calcCountdown() {
+        if (this.date.getFullYear() === this.today.getFullYear()) {
+
+
+
+        }
         var yearDiff = this.date.getFullYear() - this.today.getFullYear();
         var monthDiff = this.date.getMonth() - this.today.getMonth();
         var dayDiff = this.date.getDay() - this.today.getDay();
@@ -35,6 +40,12 @@ class Countdown{
         var secDiff = this.date.getSeconds() - this.today.getSeconds();
         return [yearDiff, monthDiff, dayDiff, minDiff, secDiff]
     }
+}
+
+function changeText(id, month, day, title, color1, color2, foregroundColor) {
+    var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
+    var countdown = holiday.calcCountdown()
+    document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " minutes " + countdown[4] + " seconds "
 }
 
 
@@ -55,13 +66,6 @@ class Countdown{
 //     }
 //     document.getElementById()
 // }
-
-
-function changeText(id, month, day, title, color1, color2, foregroundColor) {
-    var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
-    var countdown = holiday.calcCountdown()
-    document.getElementById("DateDisplay").innerHTML = countdown[0] + " years " + countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " minutes " + countdown[4] + " seconds "
-}
 
 // console.log(newYears.date)
 // console.log(valentines.date);
