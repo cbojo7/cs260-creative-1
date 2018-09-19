@@ -38,23 +38,29 @@ class Countdown{
 }
 
 
-var newYears = new Countdown("NY-button", 0, 1, "New Year's Day", "Dark Blue", "White", "Gray");
-var valentines = new Countdown("VDay-button", 1, 14, "Valentine's Day", "Red", "Pink", "White");
-var stPattys = new Countdown("SPDay-button", 2, 17, "Saint Patrick's Day", "Green", "White", "Black");
-var fourthOfJuly = new Countdown("4th-button", 6, 4, "Fourth of July", "Blue", "Red", "White");
-// var halloween = new Countdown("H-button", 9, 31, "Halloween", "Orange", "Black", "White");
-var christmas = new Countdown("Xmas-button", 11, 25, "Christmas", "Green", "Red", "White");
-var presetHolidays = [newYears, valentines, stPattys, fourthOfJuly, christmas]
+// var newYears = new Countdown("NY-button", 0, 1, "New Year's Day", "Dark Blue", "White", "Gray");
+// var valentines = new Countdown("VDay-button", 1, 14, "Valentine's Day", "Red", "Pink", "White");
+// var stPattys = new Countdown("SPDay-button", 2, 17, "Saint Patrick's Day", "Green", "White", "Black");
+// var fourthOfJuly = new Countdown("4th-button", 6, 4, "Fourth of July", "Blue", "Red", "White");
+// // var halloween = new Countdown("H-button", 9, 31, "Halloween", "Orange", "Black", "White");
+// var christmas = new Countdown("Xmas-button", 11, 25, "Christmas", "Green", "Red", "White");
+// var presetHolidays = [newYears, valentines, stPattys, fourthOfJuly, christmas]
 
 
-function setButton() {
-    for (var holiday in presetHolidays.length) {
-        var elementId = document.getElementById(holiday[0])
-        elementID.innerHTML = holiday[3]
-        // elementID.
+// function setButton() {
+//     for (var holiday in presetHolidays.length) {
+//         var elementId = document.getElementById("\"" + holiday[0] + "\"").innerHTML = holiday.createCount
+//         // elementID.
 
-    }
-    document.getElementById()
+//     }
+//     document.getElementById()
+// }
+
+
+function changeText(id, month, day, title, color1, color2, foregroundColor) {
+    var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
+    var countdown = holiday.calcCountdown()
+    document.getElementById("DateDisplay").innerHTML = countdown[0] + " years " + countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " minutes " + countdown[4] + " seconds "
 }
 
 // console.log(newYears.date)
