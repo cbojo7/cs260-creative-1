@@ -1,5 +1,6 @@
 class Countdown{
-    constructor(month, day, title, color1, color2, foregroundColor) {
+    constructor(id, month, day, title, color1, color2, foregroundColor) {
+        this.id = id
         this.month = month;
         this.day = day;
         this.title = title;
@@ -27,16 +28,34 @@ class Countdown{
     }
 
     calcCountdown() {
-        today 
+        var yearDiff = this.date.getFullYear() - this.today.getFullYear();
+        var monthDiff = this.date.getMonth() - this.today.getMonth();
+        var dayDiff = this.date.getDay() - this.today.getDay();
+        var minDiff = this.date.getMinutes() - this.today.getMinutes();
+        var secDiff = this.date.getSeconds() - this.today.getSeconds();
+        return [yearDiff, monthDiff, dayDiff, minDiff, secDiff]
     }
 }
 
-var newYears = new Countdown(0, 1, "New Year's Day", "Dark Blue", "White", "Gray");
-var valentines = new Countdown(1, 14, "Valentine's Day", "Red", "Pink", "White");
-var stPattys = new Countdown(2, 17, "Saint Patrick's Day", "Green", "White", "Black");
-var fourthOfJuly = new Countdown(6, 4, "Fourth of July", "Blue", "Red", "White");
-var halloween = new Countdown(9, 31, "Halloween", "Orange", "Black", "White");
-var christmas = new Countdown(11, 25, "Christmas", "Green", "Red", "White");
+
+var newYears = new Countdown("NY-button", 0, 1, "New Year's Day", "Dark Blue", "White", "Gray");
+var valentines = new Countdown("VDay-button", 1, 14, "Valentine's Day", "Red", "Pink", "White");
+var stPattys = new Countdown("SPDay-button", 2, 17, "Saint Patrick's Day", "Green", "White", "Black");
+var fourthOfJuly = new Countdown("4th-button", 6, 4, "Fourth of July", "Blue", "Red", "White");
+// var halloween = new Countdown("H-button", 9, 31, "Halloween", "Orange", "Black", "White");
+var christmas = new Countdown("Xmas-button", 11, 25, "Christmas", "Green", "Red", "White");
+var presetHolidays = [newYears, valentines, stPattys, fourthOfJuly, christmas]
+
+
+function setButton() {
+    for (var holiday in presetHolidays.length) {
+        var elementId = document.getElementById(holiday[0])
+        elementID.innerHTML = holiday[3]
+        // elementID.
+
+    }
+    document.getElementById()
+}
 
 // console.log(newYears.date)
 // console.log(valentines.date);
