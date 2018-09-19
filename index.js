@@ -48,6 +48,7 @@ function changeText(id, month, day, title, color1, color2, foregroundColor) {
     var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
     var countdown = holiday.calcCountdown();
     document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " hours " + countdown[4] + " minutes " + countdown[5] + " seconds "
+    document.getElementById("title").innerHTML = "Countdown to " + title
 }
 
 function lastDay(month,year) {
