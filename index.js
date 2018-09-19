@@ -35,7 +35,7 @@ class Countdown{
             monthDiff += 12;
         }
         if (dayDiff < 0) {
-            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear());
+            dayDiff += lastDay(this.date.getMonth() - 1,this.date.getFullYear());
         }
         var hourDiff = 23 - this.today.getHours();
         var minDiff = 59 - this.today.getMinutes();
