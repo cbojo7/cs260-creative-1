@@ -28,24 +28,30 @@ class Countdown{
     }
 
     calcCountdown() {
-        if (this.date.getFullYear() === this.today.getFullYear()) {
-
-
-
-        }
         var yearDiff = this.date.getFullYear() - this.today.getFullYear();
         var monthDiff = this.date.getMonth() - this.today.getMonth();
-        var dayDiff = this.date.getDay() - this.today.getDay();
-        var minDiff = this.date.getMinutes() - this.today.getMinutes();
-        var secDiff = this.date.getSeconds() - this.today.getSeconds();
-        return [yearDiff, monthDiff, dayDiff, minDiff, secDiff]
+        var dayDiff = this.date.getDate() - this.today.getDate();
+        if (monthDiff < 0) {
+            monthDiff += 12;
+        }
+        if (dayDiff < 0) {
+            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear());
+        }
+        var hourDiff = 23 - this.today.getHours();
+        var minDiff = 59 - this.today.getMinutes();
+        var secDiff = 59 - this.today.getSeconds();
+        return [yearDiff, monthDiff, dayDiff, hourDiff, minDiff, secDiff]
     }
 }
 
 function changeText(id, month, day, title, color1, color2, foregroundColor) {
     var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
-    var countdown = holiday.calcCountdown()
-    document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " minutes " + countdown[4] + " seconds "
+    var countdown = holiday.calcCountdown();
+    document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " hours " + countdown[4] + " minutes " + countdown[5] + " seconds "
+}
+
+function lastDay(month,year) {
+    return new Date(month,year,0);
 }
 
 
