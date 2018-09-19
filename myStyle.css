@@ -2,6 +2,58 @@
     
 }
 
+/* #Xmas-button {
+    background-color: green;
+}
+
+#NY-button {
+    background-color: blue;
+}
+
+#VDay-button {
+    background-color: red;
+}
+
+#Fth-button {
+    background-color: red;
+}
+
+#SPDay-button {
+    background-color: green;
+} */
+
+#Xmas-button:hover {
+    background-color: rgb(230, 4, 4);
+    color: rgb(2, 255, 2);
+}
+
+#NY-button:hover {
+    background-color: rgb(111, 111, 255);
+    color: white;
+}
+
+#VDay-button:hover {
+    background-color: pink;
+    color: red;
+}
+
+#tomorrow-button:hover {
+    background-color: black;
+}
+
+#Fth-button:hover {
+    background-color: red;
+    color: rgb(0, 0, 172);
+}
+
+#SPDay-button:hover {
+    background-color: green;
+    color: orange;
+}
+
+
+
+
 .row {
     padding: 10px;
 }
@@ -11,6 +63,7 @@
     margin: auto;
     width: 100%;
     padding: 10px;
+    border: 1px solid black;
 }
 #DateDisplay {
     text-align: center;
