@@ -40,6 +40,10 @@ class Countdown{
         var hourDiff = 23 - this.today.getHours();
         var minDiff = 59 - this.today.getMinutes();
         var secDiff = 59 - this.today.getSeconds();
+        if (this.title == "Tomorrow") {
+            monthDiff = 0
+            dayDiff = 0
+        }
         return [yearDiff, monthDiff, dayDiff, hourDiff, minDiff, secDiff]
     }
 }
@@ -47,8 +51,11 @@ class Countdown{
 function changeText(id, month, day, title, color1, color2, foregroundColor) {
     var holiday = new Countdown(id, month, day, title, color1, color2, foregroundColor);
     var countdown = holiday.calcCountdown();
-    document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " hours " + countdown[4] + " minutes " + countdown[5] + " seconds "
-    document.getElementById("title").innerHTML = "Countdown to " + title
+    document.getElementById("DateDisplay").innerHTML = countdown[1] + " months " + countdown[2] + " days " + countdown[3] + " hours " + countdown[4] + " minutes " + countdown[5] + " seconds ";
+    document.getElementById("title").innerHTML = "Countdown to " + title;
+    document.getElementById("backgroundColor").style.backgroundColor = holiday.color1;
+    document.getElementById("backgroundColor").style.color = holiday.foregroundColor;
+    document.getElementById("title").style.backgroundColor = holiday.color2;
 }
 
 function lastDay(month,year) {
