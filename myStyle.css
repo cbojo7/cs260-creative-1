@@ -7,8 +7,15 @@
 }
 .btn {
     width: 150px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
 }
 #DateDisplay {
     text-align: center;
     font-size: 100px;
+}
+#title {
+    text-align: center;
 }
