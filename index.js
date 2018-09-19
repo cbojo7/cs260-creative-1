@@ -30,12 +30,12 @@ class Countdown{
     calcCountdown() {
         var yearDiff = this.date.getFullYear() - this.today.getFullYear();
         var monthDiff = this.date.getMonth() - this.today.getMonth();
-        var dayDiff = this.date.getDate() - this.today.getDate();
+        var dayDiff = this.date.getDate() - this.today.getDate() - 1;
         if (monthDiff < 0) {
             monthDiff += 12;
         }
         if (dayDiff < 0) {
-            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear()) - 2;
+            dayDiff += lastDay(this.date.getMonth(),this.date.getFullYear());
         }
         var hourDiff = 23 - this.today.getHours();
         var minDiff = 59 - this.today.getMinutes();
