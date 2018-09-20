@@ -23,22 +23,22 @@
 } */
 
 #Xmas-button:hover {
-    background-color: rgb(230, 4, 4);
-    color: rgb(2, 255, 2);
+    background-color: #40531B;
+    color: #9B2915;
 }
 
 #NY-button:hover {
-    background-color: rgb(111, 111, 255);
+    background-color:#black;
     color: white;
 }
 
 #VDay-button:hover {
-    background-color: pink;
-    color: red;
+    background-color: #8E3B46;
+    color: #E0777D;
 }
 
 #tomorrow-button:hover {
-    background-color: black;
+    background-color: gray;
 }
 
 #Fth-button:hover {
@@ -47,8 +47,8 @@
 }
 
 #SPDay-button:hover {
-    background-color: green;
-    color: orange;
+    background-color: orange;
+    color: #618B4A;
 }
 
 
@@ -61,7 +61,7 @@
     width: 150px;
     text-align: center;
     margin: auto;
-    width: 100%;
+    width: 100%;#
     padding: 10px;
     border: 1px solid black;
 }
